@@ -1,0 +1,17 @@
+conda env create -name gans -f enviroment.yml
+
+conda activate gans 
+
+cd repo/model
+
+python train.py
+
+python predict.py -i ../data/example_input.txt -o ../data/output.txt
+
+python predict.py -i ../Data/example_input.txt -o ../Data/output_mlp.txt -m mlp
+
+python predict.py -i ../Data/example_input.txt -o ../Data/output_gan.txt -m gan
+
+python predict.py -i ../Data/example_input.txt -o ../Data/output_vae.txt -m vae
+
+python predict.py -i ../Data/example_input.txt -o ../Data/output_mlp.txt -m mlp
